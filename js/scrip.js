@@ -12,6 +12,17 @@ $(document).ready(function () {
         $('.cover').removeClass('active');
     });
 });
+// =========================== Tab Product ======================
+$(document).ready(function () {
+    $('.product-bar-name').click(function (e) { 
+        e.preventDefault();
+        var _id = $(this).attr('href');
+        $('.product-bar-name').removeClass('active');
+        $('.product-row').removeClass('active');
+        $(_id).addClass('active');
+        $(this).addClass('active');
+    });
+});
 
 
 // $('.nav-icon').click(function (e) { 

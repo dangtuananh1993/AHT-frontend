@@ -1,18 +1,3 @@
-
-.cover {
-    width: 100vw;
-    height: 100vh;
-    background-color: @black-color;
-    opacity: 1;
-    position: fixed;
-    z-index: -1;
-    opacity: 0;
-}
-.cover.active {
-    opacity: 0.9;
-    z-index: 100;
-    .transit(all, .5s);
-}
 .logo-mobile {
     text-align: center;
     display: none;
@@ -29,7 +14,6 @@
 }
 .header {
     position: relative;
-    
     .menu-bar {
         position: absolute;
         top: 0;
@@ -44,7 +28,6 @@
         &-inner {
             display: flex;
             justify-content: space-between;
-            // align-items: center;
             .menu-logo-left {
                 display: flex;
                 .navigation-icon {
@@ -82,7 +65,7 @@
                         padding-left: 47px;
                     }
                     .home {
-                        padding-left: 89px;
+                        padding-left: 87px;
                     }
                 }
             }
@@ -95,6 +78,7 @@
                     line-height: 16px;
                     height: 18px;
                     margin-top: 27px;
+                    font-weight: 400;
                 }
                 .person-icon {
                     border-left: 2px solid @main-color;
@@ -120,7 +104,6 @@
             }
         }
     }
-    
 }
 .banner {
     width: 100%;
@@ -129,13 +112,86 @@
     right: 50%;
     &-inner {
         .row {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             margin: 0;
+            .banner-inner-icon {
+                position: relative;
+                .col(33.3333%);
+                padding: 0;
+                overflow: hidden;
+                .banner-col {
+                    padding: 0;
+                    width: 100%;
+                    img {
+                        display: block;
+                        width: 100%;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    .banner-content {
+                        &-title {
+                            .transit(all, 0.5s);
+                            .transformer(translate(0, -10px));
+                        }
+                        &-summary {
+                            .transit(all, 0.5s);
+                            .transformer(translate(0, -10px));
+                        }
+                        &-icon {
+                            .transit(all, 0.5s);
+                            .transformer(translate(0, -10px));
+                        }
+                    }
+                }
+                .banner-content {
+                    width: 100%;
+                    position: absolute;
+                    top: 12.5%;
+                    left: 50%;
+                    .transit(all, 0.5s);
+                    .transformer(translate(-50%, 0));
+                    .space {
+                        height: 15px;
+                    }
+                    &-title {
+                        .transit(all, 0.5s);
+                        font-size: 18px;
+                        font-weight: 700;
+                        text-align: center;
+                        text-transform: uppercase;
+                        width: 77%;
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-top: 23px;
+                    }
+                    &-summary {
+                        .transit(all, 0.5s);
+                        color: @main-color;
+                        font-size: 14px;
+                        text-align: center;
+                        width: 77%;
+                        margin-right: auto;
+                        margin-left: auto;
+                        line-height: 24px;
+                    }
+                    img {
+                        .transit(all, 0.5s);
+                        display: block;
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                    &-icon {
+                        .transit(all, 0.5s);
+                    }
+                }
+            }
             .banner-inner-item {
                 position: relative;
                 .col(33.3333%);
                 padding: 0;
                 overflow: hidden;
-                // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 &:hover {
                     cursor: pointer;
                     img {
@@ -148,63 +204,6 @@
                     display: block;
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 }
-                .strength-banner {
-                    width: 100%;
-                    position: absolute;
-                    top: 25%;
-                    left: 50%;
-                    .transformer(translate(-50%, 0));
-                    .space {
-                        height: 15px;
-                    }
-                    &-title {
-                        font-size: 18px;
-                        font-weight: 700;
-                        text-align: center;
-                        text-transform: uppercase;
-                        width: 77%;
-                        margin-right: auto;
-                        margin-left: auto;
-                    }
-                    &-summary {
-                        color: @main-color;
-                        font-size: 14px;
-                        text-align: center;
-                        width: 77%;
-                        margin-right: auto;
-                        margin-left: auto;
-                        line-height: 24px;
-                    }
-                }
-                .banner-content {
-                    width: 100%;
-                    position: absolute;
-                    top: 75%;
-                    left: 50%;
-                    .transformer(translate(-50%, 0));
-                    .space {
-                        height: 15px;
-                    }
-                    &-title {
-                        font-size: 18px;
-                        font-weight: 700;
-                        text-align: center;
-                        text-transform: uppercase;
-                        width: 77%;
-                        margin-right: auto;
-                        margin-left: auto;
-                    }
-                    &-summary {
-                        color: @main-color;
-                        font-size: 14px;
-                        text-align: center;
-                        width: 77%;
-                        margin-right: auto;
-                        margin-left: auto;
-                        line-height: 24px;
-                    }
-                }
-                
             }
         }
     }
