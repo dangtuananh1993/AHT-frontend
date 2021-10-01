@@ -49,7 +49,7 @@
                             a {
                                 font-size: 12px;
                                 display: block;
-                                line-height: 40px;
+                                padding: 11px 25px;
                             }
                         }
                     }
@@ -193,7 +193,7 @@
                             a {
                                 font-size: 14px;
                                 display: block;
-                                line-height: 50px;
+                                padding: 13px 21px;
                             }
                         }
                     }
@@ -437,7 +437,7 @@
             .row {
                 .footer-bot-col {
                     width: 50%;
-                    height: 222px;
+                    height: 235px;
                     .ft-title {
                         margin-top: 27px;
                     }
@@ -459,8 +459,6 @@
             }
             .menu-right {
                 .nav-bar-icon {
-                    i {
-                    }
                 }
             }
         }
@@ -482,10 +480,9 @@
                         .btn {
                             margin-top: 60px;
                             height: 40px;
-                            line-height: 40px;
                             a {
-                                line-height: 40px;
                                 font-size: 12px;
+                                padding: 10px 26px;
                             }
                         }
                     }
@@ -576,12 +573,13 @@
         }
         .copyright {
             font-size: 11px;
-            height: 50px;
+            height: auto;
+            min-height: 50px;
         }
         &-bot {
             .row {
                 .footer-bot-col {
-                    height: 250px;
+                    height: 270px;
                 }
             }
         }
@@ -609,11 +607,10 @@
                         .btn {
                             margin-top: 50px;
                             height: 25px;
-                            line-height: 25px;
                             width: 100px;
                             a {
-                                line-height: 25px;
                                 font-size: 11px;
+                                padding: 3px 19px;
                             }
                         }
                     }
@@ -625,6 +622,9 @@
     }
     .banner-inner {
         .row {
+            .product-item {
+                width: 1000%;
+            }
             .banner-inner-item {
                 width: 100%;
             }
@@ -635,10 +635,14 @@
                         margin-top: 20px;   
                     }
                     .banner-content-summary {
-                        line-height: 26px;
+                        line-height: 22px;
+                        font-size: 13px;
                     }
                     .space {
                         height: 7px;
+                    }
+                    .banner-content-title {
+                        font-size: 15px;
                     }
                 }
             }
@@ -650,22 +654,32 @@
                 li {
                     a {
                         font-size: 12px;
+                        padding-left: 10px;
+                        padding-right: 8px;
                     }
                 }
             }
             .product-bar-name {
-                height: 50px;
-                
             }
             .row {
                 .product-item-content {
                     .transformer(translate(20%, -160%));
                     .prd-content-name {
-                        font-size: 11px;
+                        font-size: 14px;
                     }
                     .prd-content-price {
-                        font-size: 11px;
+                        font-size: 14px;
                     }
+                }
+                .product-item {
+                    width: 100%;
+                }
+            }
+        }
+        .brand {
+            .row {
+                .brand-item {
+                    width: 50%;
                 }
             }
         }

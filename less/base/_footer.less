@@ -89,7 +89,16 @@
         font-size: 14px;
         background-color: @bg-copyright-color;
         color: @main-color;
-        height: 50px;
-        line-height: 50px;
+        min-height: 50px;
+        box-sizing: border-box;
+        height: auto;
+        .copyright-content {
+            width: 85%;
+            padding-top: 14.5px;
+            padding-bottom: 14.5px;
+            background-color: @bg-copyright-color;
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 }
